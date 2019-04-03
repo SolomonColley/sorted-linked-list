@@ -6,7 +6,7 @@ interface that users need to further develop more specific
 algorithms.
 
 @author		Solomon Colley
-@file		SortedLinkedList.h
+@file		SortedLinkedList.cpp
 @since		03/31/2019
 */
 
@@ -49,25 +49,18 @@ Node<ItemType>* SortedLinkedList<ItemType>::getNodeBefore(const ItemType& anEntr
 template<class ItemType>
 Node<ItemType>* SortedLinkedList<ItemType>::getNodeAt(int position) const
 {
-	bool canGet = ((position >= 1) && (position <= itemCount));
+	assert((position >= 1) && (position <= itemCount));
 
-	if (canGet)
-	{
-		/*
-		Traverse the chain from the beginning and return the node
-		at the specified position.
-		*/
-		Node<ItemType>* curPtr = headPtr;
+	/*
+	Traverse the chain from the beginning and return the node
+	at the specified position.
+	*/
+	Node<ItemType>* curPtr = headPtr;
 
-		for (int skip = 1; skip < position; ++skip)
-			curPtr = curPtr->getNext();
+	for (int skip = 1; skip < position; ++skip)
+		curPtr = curPtr->getNext();
 
-		return curPtr;
-	}
-	else
-		return nullptr;
-
-	return nullptr;
+	return curPtr;
 } // end getNodeAt
 
 template<class ItemType>
@@ -251,21 +244,3 @@ bool SortedLinkedList<ItemType>::isEmpty() const
 {
 	return itemCount == 0;
 } // end isEmpty
-
-/*
-template<class ItemType>
-Node<ItemType>* SortedLinkedList<ItemType>::getNodeAt(int position) const
-{
-	// assert((position >= 1) && (position <= itemCount));
-
-   if ((position >= 1) && (position <= itemCount))
-	   return nullptr;
-
-   // Count from the beginning of the chain
-   Node<ItemType>* curPtr = headPtr;
-   for (int skip = 1; skip < position; skip++)
-	  curPtr = curPtr->getNext();
-
-   return curPtr;
-}  // end getNodeAt
-*/

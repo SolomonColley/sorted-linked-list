@@ -48,6 +48,9 @@ int main()
 	cout << "\n";
 
 	// Remove all the odd ints from within the sorted linked list.
+	/* Because we are removing odd integers from the sorted linked list as we traverse it,
+	it must be traversed backwards. Otherwise integers will be skipped as the list's
+	length changes with every removal. */
 	cout << "Removing all odd integers from within the sorted linked list ~\n" << endl;
 	int curEntry = 0;
 	counter = 0;
@@ -82,6 +85,7 @@ int main()
 	cout << "The sorted linked list contains " << listPtr->getLength() << " entries and "
 		<< "will now be deleted.\n" << endl;
 	delete listPtr;
+	listPtr = nullptr;
 
 	cout << "Thank you for checking out my implementation of the sorted linked list ADT!\n" << endl;
 

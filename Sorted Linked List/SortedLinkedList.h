@@ -14,6 +14,7 @@ algorithms.
 
 #pragma warning(disable : 4290)
 
+#include <cassert>
 #include "Node.h"
 #include "PreconditionViolatedException.h"
 #include "SortedListInterface.h"
