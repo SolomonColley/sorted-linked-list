@@ -9,6 +9,7 @@ Exceptions are caught with an associated massage.
 
 #pragma once
 
+#include <stdexcept>
 #include <string>
 
 class PreconditionViolatedException : public std::logic_error
