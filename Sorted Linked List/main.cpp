@@ -26,7 +26,7 @@ int main()
 	cout << "Generating 100 random integers 0 < x < 1,000 and inserting them into\n"
 		<< "the sorted linked list ~\n" << endl;
 	int* randInts = new int[100];
-	srand( (unsigned int) time(NULL));
+	srand((unsigned int) time(NULL));
 	for (int i = 0; i < 100; ++i)
 	{
 		randInts[i] = rand() % 1000 + 0;
