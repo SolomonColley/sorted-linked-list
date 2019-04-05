@@ -20,6 +20,7 @@ public:
 					list is sorted.
 	@param		const ItemType& newEntry - The entry to insert into
 					the sorted list.
+	@return		void
 	*/
 	virtual void insertEntry(const ItemType& newEntry) = 0;
 
@@ -28,8 +29,8 @@ public:
 	sorted list.
 	@pre		The list is not empty.
 	@post		If the removal is successful, the first occurrence of the
-					given entry is no longer in the sorted list, and the returned
-					value is true. Otherwise, the sorted list is unchanged and the
+					given entry is no longer in the sorted list and the returned
+					value is true. Else the sorted list is unchanged and the
 					returned value is false.
 	@param		const ItemType& anEntry - The entry to remove.
 	@return		True if the removal is successful, or false if not.
@@ -56,7 +57,7 @@ public:
 	@post		The entry at the specified position is removed from
 					the list, or the list remains unchanged if
 					@pre fails.
-	@return		True if the removal succeeds, or false if not.
+	@return		True if the removal is successful, or false if not.
 	*/
 	virtual bool removePosition(int position) = 0;
 
