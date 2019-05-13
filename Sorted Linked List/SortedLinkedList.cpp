@@ -216,7 +216,7 @@ void SortedLinkedList<ItemType>::clear()
 }  // end clear
 
 template<class ItemType>
-ItemType SortedLinkedList<ItemType>::getEntry(int position) const throw(PreconditionViolatedException)
+ItemType SortedLinkedList<ItemType>::getEntry(int position) const throw(PreconditionException)
 {
 	// Enforce the preconditions
 	bool canGet = (position >= 1) && (position <= itemCount);
@@ -229,7 +229,7 @@ ItemType SortedLinkedList<ItemType>::getEntry(int position) const throw(Precondi
 	else
 	{
 		std::string message = "getEntry() called with an empty list or an invalid position.";
-		throw(PreconditionViolatedException(message)); 
+		throw(PreconditionException(message)); 
 	} // end if-else
 } // end getEntry
 

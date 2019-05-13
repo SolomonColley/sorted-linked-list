@@ -20,12 +20,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="PreconditionViolatedException.cpp" />
+    <ClCompile Include="PreconditionException.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SortedLinkedList.h" />
     <ClInclude Include="Node.h" />
-    <ClInclude Include="PreconditionViolatedException.h" />
+    <ClInclude Include="PreconditionException.h" />
     <ClInclude Include="SortedListInterface.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

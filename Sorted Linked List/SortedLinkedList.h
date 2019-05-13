@@ -16,7 +16,7 @@ algorithms.
 
 #include <cassert>
 #include "Node.h"
-#include "PreconditionViolatedException.h"
+#include "PreconditionException.h"
 #include "SortedListInterface.h"
 
 template<class ItemType>
@@ -74,7 +74,7 @@ public:
 	bool removePosition(int position);
 
 	void clear();
-	ItemType getEntry(int position) const throw(PreconditionViolatedException);
+	ItemType getEntry(int position) const throw(PreconditionException);
 	int getLength() const;
 	bool isEmpty() const;
 }; // end class LinkedSortedList

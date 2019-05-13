@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PreconditionViolatedException.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="PreconditionException.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,10 +29,10 @@
     <ClInclude Include="SortedListInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PreconditionViolatedException.h">
+    <ClInclude Include="SortedLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SortedLinkedList.h">
+    <ClInclude Include="PreconditionException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
