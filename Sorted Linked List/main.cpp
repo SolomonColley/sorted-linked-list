@@ -73,7 +73,7 @@ int main()
 	for (int position = listPtr->getLength(); position > 0; --position)
 	{
 		++counter;
-		cout << listPtr->getEntry(position) << ", ";
+		cout << listPtr->getEntry(position) << " ";
 		if (counter % 10 == 0)
 			cout << "\n"; // end if-else
 	} // end for
